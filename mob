@@ -1,0 +1,43 @@
+fun main() {
+    val f1 = Point()
+    f1.wiri = 4F
+    f1.gani = 6F
+    f1.moving()
+
+    val f2 = Point()
+    f2.wiri = 4F
+    f2.gani = 5F
+
+   println(f1)
+    println(f1 == f2)
+
+}
+
+class Point {
+    var wiri: Float = 0F
+    var gani: Float = 1F
+
+    override fun equals(other: Any?): Boolean {
+        if (other is Point) {
+            if  (wiri == other.wiri && gani == other.gani) {
+                return true
+            }
+        }
+        return false
+    }
+
+    override fun toString(): String {
+        return ("X=$wiri,Y=$gani ")
+    }
+
+
+    fun moving(): String {
+        wiri = -wiri
+        gani = -gani
+        return ("X=$wiri,Y=$gani ")
+    }
+}
+
+{
+
+}
